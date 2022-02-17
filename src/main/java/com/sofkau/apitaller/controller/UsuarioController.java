@@ -44,5 +44,11 @@ public class UsuarioController {
         }
     }
 
-
+    //se implementa el controlador del servicio de existencia
+    @GetMapping("/existe")
+    public String existeElUsuario (@RequestParam("id") Long id){
+        if(this.usuarioService.existeUsuario(id)) {
+            return "El usuario existe";
+        }else {return  "El usuario con Id "+id+" no existe";}
+    }
 }
