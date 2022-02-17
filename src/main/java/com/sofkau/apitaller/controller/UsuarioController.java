@@ -43,4 +43,6 @@ public class UsuarioController {
             return "No se pudo eliminar el usuario con id "+id;
         }
     }
+
+
 }

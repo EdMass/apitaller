@@ -37,5 +37,15 @@ public class UsuarioService {
         }catch (Exception err){
             return false;
         }
+
+    }
+
+    //se crea servicio para verificar existencia del usuario
+    public boolean existeUsuario(Long id){
+        try {
+            return usuarioRepository.existsById(id);
+        }catch (Exception err){
+            return false;
+        }
     }
 }
