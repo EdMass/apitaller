@@ -13,8 +13,12 @@ public class UsuarioModel {
     @Column(unique = true, nullable = false)
     private  long id;
 
-
+    //longitud del nombre puede ser de maximo 50
+    @Column(length = 50)
     private String nombre;
+
+    //Se establece nombre de la columna, que no sea nulo, longitud, que no se repita
+    @Column(name = "mail", nullable = false, length = 50, unique = true)
     private String email;
     private Integer prioridad;
 
